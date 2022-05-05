@@ -1,0 +1,12 @@
+{
+  "name": "Hide self in Google Meet",
+  "description": "Automatically hide your self view in Google Meet - better for your mental health!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*-*-*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
