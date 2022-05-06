@@ -1,4 +1,4 @@
-# Google Meet Hide Self
+# Google Meet Hide Self (Chrome extension)
 
 Have you ever had a mirror in front of you in a meeting? Probably not. Why then should you always be looking at yourself in a video call in Google Meet?
 
