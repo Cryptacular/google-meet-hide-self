@@ -23,7 +23,7 @@ const hideSelfButton = () =>
 const isElementVisible = (el) => el.offsetParent === null;
 
 const areOthersInTheCall = () =>
-  document.querySelectorAll("[data-self-name=You]").length > 2;
+  document.querySelectorAll("[data-self-name=You]").length > 1;
 
 const interval = setInterval(() => {
   if (isOnJoinPage()) {
