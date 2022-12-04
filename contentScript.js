@@ -20,6 +20,17 @@ const hideSelfButton = () =>
     )
     .iterateNext();
 
+const closeSendingVideoButton = () =>
+  document
+    .evaluate(
+      "//button[i[contains(., 'close')]]",
+      document,
+      null,
+      XPathResult.ANY_TYPE,
+      null
+    )
+    .iterateNext();
+
 const isElementVisible = (el) => el.offsetParent === null;
 
 const areOthersInTheCall = () =>
@@ -35,5 +46,8 @@ const interval = setInterval(() => {
     console.log("Hiding self...");
     clearInterval(interval);
     hideSelfButton().click();
+    setTimeout(() => {
+      closeSendingVideoButton().click();
+    }, 4000);
   }
 }, 2000);
