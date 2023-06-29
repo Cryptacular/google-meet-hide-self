@@ -23,7 +23,7 @@ const hideSelfButton = () =>
 const moreButton = () =>
   document
     .evaluate(
-      "//button[i[contains(., 'more_vert')]]",
+      "//i[contains(., 'auto_awesome')]/following::i[contains(., 'more_vert')]",
       document,
       null,
       XPathResult.ANY_TYPE,
