@@ -9,10 +9,21 @@ const isOnJoinPage = () =>
     )
     .iterateNext();
 
+const menuButton = () =>
+  document
+    .evaluate(
+      "//div[preceding-sibling::div[contains(., 'auto_awesome')]]//button[contains(., 'more_vert')]",
+      document,
+      null,
+      XPathResult.ANY_TYPE,
+      null
+    )
+    .iterateNext()
+
 const hideSelfButton = () =>
   document
     .evaluate(
-      "//div[following-sibling::span//i[contains(., 'close_fullscreen')]]",
+      "//li[contains(., 'close_fullscreen')]",
       document,
       null,
       XPathResult.ANY_TYPE,
@@ -45,9 +56,12 @@ const interval = setInterval(() => {
   if (areOthersInTheCall()) {
     console.log("Hiding self...");
     clearInterval(interval);
-    hideSelfButton().click();
+    menuButton().click();
     setTimeout(() => {
-      closeSendingVideoButton().click();
-    }, 4000);
+      hideSelfButton().click();
+      setTimeout(() => {
+        closeSendingVideoButton().click();
+      }, 4000);
+    }, 250)
   }
 }, 2000);
