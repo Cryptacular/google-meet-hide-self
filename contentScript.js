@@ -49,17 +49,15 @@ const areOthersInTheCall = () =>
 
 const interval = setInterval(() => {
   if (isOnJoinPage()) {
-    console.log("On join page, waiting...");
     return;
   }
 
   if (areOthersInTheCall()) {
-    console.log("Hiding self...");
     clearInterval(interval);
     moreButton().click();
     setTimeout(() => {
       hideSelfButton().click();
-    });
+    }, 200);
     setTimeout(() => {
       closeSendingVideoButton().click();
     }, 4000);
