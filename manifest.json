@@ -1,7 +1,7 @@
 {
   "name": "Hide self in Google Meet",
   "description": "Automatically hide your self view in Google Meet - better for your mental health!",
-  "version": "1.5",
+  "version": "1.6",
   "manifest_version": 3,
   "icons": {
     "16": "images/icon@16px.png",

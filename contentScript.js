@@ -1,7 +1,7 @@
 const isOnJoinPage = () =>
   !!document
     .evaluate(
-      "//i[contains(., 'more_vert')]",
+      "//i[contains(., 'phone_forwarded')]",
       document,
       null,
       XPathResult.ANY_TYPE,
