@@ -23,7 +23,7 @@ const hideSelfButton = () =>
 const moreButton = () =>
   document
     .evaluate(
-      "//i[contains(., 'auto_awesome')]/following::i[contains(., 'more_vert')]",
+      "//i[contains(., 'visual_effects')]/following::i[contains(., 'more_vert')]",
       document,
       null,
       XPathResult.ANY_TYPE,
@@ -45,7 +45,7 @@ const closeSendingVideoButton = () =>
 const isElementVisible = (el) => el.offsetParent === null;
 
 const areOthersInTheCall = () =>
-  document.querySelectorAll("[data-self-name=You]").length > 1;
+  document.getElementsByTagName("video").length > 1;
 
 const interval = setInterval(() => {
   if (isOnJoinPage()) {
